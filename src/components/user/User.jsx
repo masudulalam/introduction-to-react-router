@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 
 const User = ({ user }) => {
-    const {id, name, email, phone} = user;
+    const {name, email, phone} = user;
     const userStyles = {
         border: '2px solid mediumseagreen',
         padding: '10px',
@@ -15,5 +16,9 @@ const User = ({ user }) => {
         </div>
     );
 };
+
+User.propTypes = {
+    user: PropTypes.object,
+}
 
 export default User;
